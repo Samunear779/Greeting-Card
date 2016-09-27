@@ -1,6 +1,6 @@
 ﻿namespace Greeting_Card
 {
-    partial class Form1
+    partial class greetingCard
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@
             this.funnyTitle.TabIndex = 2;
             this.funnyTitle.Text = "Someone Actually Likes You";
             // 
-            // Form1
+            // greetingCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -74,7 +74,7 @@
             this.Controls.Add(this.funnyTitle);
             this.Controls.Add(this.happyImage);
             this.Controls.Add(this.cardTitle);
-            this.Name = "Form1";
+            this.Name = "greetingCard";
             this.Text = "Form1";
             this.Click += new System.EventHandler(this.Form1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.happyImage)).EndInit();

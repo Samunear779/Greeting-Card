@@ -69,5 +69,23 @@ namespace Greeting_Card.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Geet {
+            get {
+                return ResourceManager.GetStream("Geet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Glaaa {
+            get {
+                return ResourceManager.GetStream("Glaaa", resourceCulture);
+            }
+        }
     }
 }
