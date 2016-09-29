@@ -70,7 +70,8 @@
             // name
             // 
             this.name.AutoSize = true;
-            this.name.ForeColor = System.Drawing.Color.White;
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.ForeColor = System.Drawing.Color.Transparent;
             this.name.Location = new System.Drawing.Point(13, 444);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(54, 13);
@@ -89,7 +90,7 @@
             this.Controls.Add(this.cardTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "greetingCard";
-            this.Text = "Freeting Card ";
+            this.Text = "Greeting Card ";
             this.Click += new System.EventHandler(this.Form1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.happyImage)).EndInit();
             this.ResumeLayout(false);
