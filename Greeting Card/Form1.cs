@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Sam Near
+//Greeting card with Leo constilation
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using System.Media
+using System.Media;
 
 namespace Greeting_Card
 {
@@ -15,15 +19,11 @@ namespace Greeting_Card
     {
         public greetingCard()
         {
-            InitializeComponent();
-          
-
-            
+            InitializeComponent();    
         }
-
         private void Form1_Click(object sender, EventArgs e)
         {
-            Graphics fg = this.CreateGraphics();                //Set up graphics pen,brushs,and brushs for later use 
+            Graphics fg = this.CreateGraphics();                //Set up graphics pens,brushes,and font for use in the card 
             SolidBrush whiteBrush = new SolidBrush(Color.White);
             Pen WhitePen = new Pen(Color.White, 10);
             Pen YellowPen = new Pen(Color.Yellow, 2);
@@ -33,55 +33,66 @@ namespace Greeting_Card
             SoundPlayer Gaa = new SoundPlayer(Properties.Resources.Glaaa);
             SoundPlayer Geet = new SoundPlayer(Properties.Resources.Geet);
           
-
-
-            cardTitle.Visible = false;
+            cardTitle.Visible = false;  //Gets rid of the initial titles and image 
             funnyTitle.Visible = false;
             happyImage.Visible = false;
             fg.Clear(Color.Black);
             Thread.Sleep(500);
-
+                                       //Writes text about the constilation 
             fg.DrawString("Leo contains many bright stars, many of which were individually", smallFont, whiteBrush, 10, 400);
             fg.DrawString("identified by the ancients. There are four stars of first or ", smallFont, whiteBrush, 10, 410);
-            fg.DrawString("second magnitude, which render this constellation especially prominent", smallFont, whiteBrush, 10, 420);
+            fg.DrawString("second magnitude, which render this constellation especially ", smallFont, whiteBrush, 10, 420);
             fg.DrawString("prominent", smallFont, whiteBrush, 10, 430);
-
+                                       //Draws the starts and adds delays and sound to each star
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 247, 91, 5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 247, 91, 227, 81);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 227, 81, 5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 227, 81, 200, 120);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 200, 120,5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 200, 120, 206, 147);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 206, 147,5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 206, 147, 118, 182);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 118, 182,5, 5);
             Thread.Sleep(500);
-            fg.DrawLine(YellowPen, 118, 182, 77, 247);   
+            fg.DrawLine(YellowPen, 118, 182, 77, 247);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 77, 247, 5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 77, 247, 133, 218);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 133, 218,5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 133, 218, 250, 191);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 250, 191,5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 250, 191, 236, 158);
 
+            Geet.Play();
             fg.FillRectangle(YellowBrush, 236, 158,5, 5);
             Thread.Sleep(500);
             fg.DrawLine(YellowPen, 236, 158, 247, 91);
-
+            Gaa.Play();
+            Thread.Sleep(5000);
+                                           //Clears the graphics for goodbye screen 
+            fg.Clear(Color.Black);
+            fg.DrawString("Bye Have Good Time", drawFont, whiteBrush, 5, 200);
         }
     }
 }

@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(greetingCard));
             this.cardTitle = new System.Windows.Forms.Label();
             this.happyImage = new System.Windows.Forms.PictureBox();
             this.funnyTitle = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.happyImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +59,23 @@
             // funnyTitle
             // 
             this.funnyTitle.AutoSize = true;
-            this.funnyTitle.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.funnyTitle.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.funnyTitle.ForeColor = System.Drawing.Color.White;
             this.funnyTitle.Location = new System.Drawing.Point(-6, 346);
             this.funnyTitle.Name = "funnyTitle";
-            this.funnyTitle.Size = new System.Drawing.Size(379, 36);
+            this.funnyTitle.Size = new System.Drawing.Size(376, 39);
             this.funnyTitle.TabIndex = 2;
             this.funnyTitle.Text = "Someone Actually Likes You";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.ForeColor = System.Drawing.Color.White;
+            this.name.Location = new System.Drawing.Point(13, 444);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(54, 13);
+            this.name.TabIndex = 3;
+            this.name.Text = "Sam Near";
             // 
             // greetingCard
             // 
@@ -71,11 +83,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(371, 469);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.funnyTitle);
             this.Controls.Add(this.happyImage);
             this.Controls.Add(this.cardTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "greetingCard";
-            this.Text = "Form1";
+            this.Text = "Freeting Card ";
             this.Click += new System.EventHandler(this.Form1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.happyImage)).EndInit();
             this.ResumeLayout(false);
@@ -88,6 +102,7 @@
         private System.Windows.Forms.Label cardTitle;
         private System.Windows.Forms.PictureBox happyImage;
         private System.Windows.Forms.Label funnyTitle;
+        private System.Windows.Forms.Label name;
     }
 }
 
